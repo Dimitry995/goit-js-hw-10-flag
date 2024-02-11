@@ -4823,7 +4823,7 @@ let countries = [
       "landlocked": false,
       "borders": [],
       "area": 54,
-      "flag": "\ud83c\udde7\ud83c\uddf2",
+      "flag": "Screenshot 2023-08-12 020846.png",
       "demonyms": {
           "eng": {
               "f": "Bermudian",
@@ -18750,7 +18750,7 @@ let countries = [
           "UZB"
       ],
       "area": 199951,
-      "flag": "\ud83c\uddf0\ud83c\uddec",
+      "flag": "Screenshot 2023-08-12 020905.png",
       "demonyms": {
           "eng": {
               "f": "Kirghiz",
@@ -36121,7 +36121,7 @@ let countries = [
           "SVK"
       ],
       "area": 603500,
-      "flag": "\ud83c\uddfa\ud83c\udde6",
+      "flag": "Screenshot 2023-08-12 020829.png",
       "demonyms": {
           "eng": {
               "f": "Ukrainian",

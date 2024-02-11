@@ -1,24 +1,15 @@
 //import data from "./countries.json";
-populate();
-async function populate() {
-  const requestURL =
-    "countries.json";
-  const request = new Request(requestURL);
-
-  const response = await fetch(request);
-countries = await response.json();
-}
-
 let inPut = document.getElementById("search-box");
 let search = document.querySelector(".search");
 const infoAboutCountryEl = document.querySelector('.country-info');
 search.addEventListener('click', fetchCountries)
 function fetchCountries() {
-  countries.map(country => {
+  countries.flatMap(country => {
     if (country.name.common == inPut.value) {
       infoAboutCountryEl.innerHTML = 
       `
       <h1>${country.name.official}</h1></li>
+      <img src="${country.flag}" alt="flag"/>
       <p><b>Capital: </b>${country.capital}</p>
       <p><b>Population: </b>${country.population}</p>
       <p><b>Languages: </b>${Object.values(country.languages)}</p>`;

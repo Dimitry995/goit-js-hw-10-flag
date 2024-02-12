@@ -35335,7 +35335,7 @@ let countries = [
           "SYR"
       ],
       "area": 783562,
-      "flag": "\ud83c\uddf9\ud83c\uddf7",
+      "flag": "Screenshot 2024-02-12 210115.png",
       "demonyms": {
           "eng": {
               "f": "Turkish",

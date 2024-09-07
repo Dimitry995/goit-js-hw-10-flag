@@ -1,15 +1,45 @@
-//import data from "./countries.json";
 let inPut = document.getElementById("search-box");
 let search = document.querySelector(".search");
 const infoAboutCountryEl = document.querySelector('.country-info');
-search.addEventListener('click', fetchCountries)
+//let searchCountryName = '';
+//searchCountryName = inPut.value;
+search.addEventListener('click', fetchCountries);
+//function fetchCountriess() {
+   // console.log(searchCountryName);
+   // fetchCountries(searchCountryName).then(countryNames => {
+     //   createCountrieCard(countryNames);
+//});
+//}
+//function fetchCountries(name) {
+    //return fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`)
+        //.then(response => {
+           // if (response.ok) {
+            //    return response.json();
+           // }
+           // else {
+              //  alert('404 Error');
+            //}
+        //});
+//};
+//function createCountrieCard(country) {
+   // const c = country[0];
+   // const readyCard = `<div class="country-card">
+        //<div class="country-card--header">
+           // <img src="${c.flags.svg}" alt="Country flag" width="55", height="35">
+           // <h2 class="country-card--name"> ${c.name.official}</h2>
+       // </div>
+           // <p class="country-card--field">Capital: <span class="country-value">${c.capital}</span></p>
+            //<p class="country-card--field">Population: <span class="country-value">${c.population}</span></p>
+           // <p class="country-card--field">Languages: <span class="country-value">${Object.values(c.languages).join(',')}</span></p>
+    //</div>`
+   // infoAboutCountryEl.innerHTML = readyCard;
+//};
 function fetchCountries() {
-  countries.flatMap(country => {
+  countries.map(country => {
     if (country.name.common == inPut.value) {
       infoAboutCountryEl.innerHTML = 
       `
       <h1>${country.name.official}</h1></li>
-      <img src="${country.flag}" alt="flag"/>
       <p><b>Capital: </b>${country.capital}</p>
       <p><b>Population: </b>${country.population}</p>
       <p><b>Languages: </b>${Object.values(country.languages)}</p>`;
@@ -18,8 +48,6 @@ function fetchCountries() {
       console.log('We not search your Country!')
     }
   }).join('');
-
-}
 let countries = [
   {
       "name": {
